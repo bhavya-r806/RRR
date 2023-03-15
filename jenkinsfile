@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: maale
+spec: 
+  containers:
+    - image: jenkins/jenkins:lts
+      name: jenkins-container
+      ports:
+        - containerPort: 8080
+          protocol: TCP
+          image: alpine:3.17
+          name: alpine-container
+          ports:
+        - containerPort: 8080
+          protocol: TCP    
